@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1677741210 source:d:\j\c++\hangman\main.cpp
+	<iostream>
+	<cstring>
+	<fstream>
+
