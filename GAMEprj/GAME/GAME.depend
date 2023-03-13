@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1678117054 source:d:\j\c++\game\gameprj\game\main.cpp
+1678741400 source:d:\j\c++\game\gameprj\game\main.cpp
 	<SDL.h>
 	<iostream>
 
@@ -391,4 +391,17 @@
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
+
+1678743377 source:d:\j\c++\game\gameprj\game\source\core\engine.cpp
+	"Engine.h"
+	<iostream>
+
+1678743175 d:\j\c++\game\gameprj\game\source\core\engine.h
+
+1678743755 source:d:\j\c++\game\gameprj\game\src\core\engine.cpp
+	"Engine.h"
+	<iostream>
+
+1678743755 d:\j\c++\game\gameprj\game\src\core\engine.h
+	"SDL.h"
 
