@@ -3,6 +3,8 @@
 #include <iostream>
 #include <SDL.h>
 #include <SDL_image.h>
+#include <vector2D.h>
+#include <transform.h>
 Engine* Engine::s_Instance = NULL;
 
 bool Engine::Init(){
@@ -23,17 +25,21 @@ bool Engine::Init(){
         SDL_Log("Fail to create renderer: %s", SDL_GetError());
     }
     TextureManager::GetInstance()->Load("random", "assets/check.jpg");
+
+
+    transform tf;
+    tf.Log();
     return m_IsRunning = true;
 }
 
 void Engine::Update(){
-     SDL_Log("Dit con me may");
+     //SDL_Log("Dit con me may");
 }
 
 void Engine::Render(){
     SDL_SetRenderDrawColor(m_Renderer, 0, 0, 255, 0);
     SDL_RenderClear(m_Renderer);
-    TextureManager::GetInstance()->Draw("random", 200, 100, 828, 1410);
+    TextureManager::GetInstance()->Draw("random", 0, 0, 828, 1410);
     SDL_RenderPresent(m_Renderer);
 }
 
