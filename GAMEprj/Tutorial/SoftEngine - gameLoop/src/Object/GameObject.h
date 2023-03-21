@@ -1,45 +1,45 @@
 #ifndef GAMEOBJECT_H
 #define GAMEOBJECT_H
 
+#include <string>
 #include "IObject.h"
-#include "Transform.h"
-
-struct Properties{
-
-    public
-        Properties(std::string textureID, int x, int y, int width, int height, SDL_RendererFlip flip = SDL_FLIP_NONE){
-            X = x;
-            Y = y;
-            Flip = flip;
+#include "transform.h"
+#include "SDL.h"
+struct Properties
+{
+    public:
+        Properties(std::string textureID, int x, int y, int width, int height, SDL_RendererFlip flip = SDL_FLIP_NONE)
+        {
+            TextureID = textureID;
             Width = width;
             Height = height;
-            TextureID = textureID;
+            Flip = flip;
+            X = x;
+            Y = y;
         }
-
     public:
-        std::string TextureID;
+        int X, Y;
         int Width, Height;
-        float X, Y;
+        std::string TextureID;
         SDL_RendererFlip Flip;
-}
+};
 
-class GameObject : public IObject {
+class GameObject : public IObject
+{
     public:
-        GameObject(Properties* props) m_TextureID(props->TextureID),
-            m_Width(props->Width), m_Height(props->Height), m_Flip(props->Flip){
-
-            m_Transform = new Transform(props->X, props->Y);
+        GameObject(Properties* props): m_TextureID(props->TextureID), m_width(props->Width), m_height(props->Height), m_flip(props->Flip)
+        {
+            m_transform = new transform(props->X, props->Y);
         }
-
-        virtual void Draw()=0;
-        virtual void Clean()=0;
-        virtual void Update(float dt)=0;
+        virtual void Draw() = 0;
+        virtual void Update(float dt) = 0;
+        virtual void Clean() = 0;
 
     protected:
-        Transform* m_Transform;
-        int m_Width, m_Height;
+        transform* m_transform;
+        int m_width, m_height;
         std::string m_TextureID;
-        SDL_RendererFlip m_Flip;
+        SDL_RendererFlip m_flip;
 };
 
 #endif // GAMEOBJECT_H

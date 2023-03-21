@@ -25,8 +25,8 @@ bool Engine::Init(){
     {
         SDL_Log("Fail to create renderer: %s", SDL_GetError());
     }
-    TextureManager::GetInstance()->Load("player", "assets/PacMan.png");
-    player1 = new player(new Properties("player", 100, 200, 16, 60));
+    TextureManager::GetInstance()->Load("player", "assets/check.png");
+    player1 = new player(new Properties("player", 100, 200, 48, 86));
     transform tf;
     tf.Log();
     return m_IsRunning = true;

@@ -3,31 +3,31 @@
 
 #include <iostream>
 
-class Vector2D{
+class vector2D
+{
     public:
         float X, Y;
-
     public:
-        Vector2D(float x=0, float y=0): X(x), Y(y) {}
-
+        vector2D(float x=0, float y=0): X(x), Y(y) {}
     public:
-        // addition +
-        inline Vector2D operator+(const Vector2D& v2) const {
-            return Vector2D(X + v2.X, Y + v2.Y);
+        //addition +
+        inline vector2D operator+(const vector2D& v2) const
+        {
+            return vector2D(X+v2.X, Y+v2.Y);
         }
-
-        // difference -
-        inline Vector2D operator-(const Vector2D& v2) const {
-            return Vector2D(X - v2.X, Y - v2.Y);
+        //subtraction-
+        inline vector2D operator-(const vector2D& v2) const
+        {
+            return vector2D(X-v2.X, Y-v2.Y);
         }
-
-        // multiplication *
-        inline Vector2D operator*(const float scalar) const {
-            return Vector2D(X*scalar, Y*scalar);
+        //multiplication*
+        inline vector2D operator*(const float scalar) const
+        {
+            return vector2D(X*scalar, Y*scalar);
         }
-
-        void Log(std::string msg = ""){
-            std::cout << msg << "(X Y) = (" << X << " " << Y << ")"<< std::endl;
+        void Log(std::string mag = "")
+        {
+            std::cout << mag << "(X Y) = (" << X <<" " << Y <<  ")" <<std::endl;
         }
 };
 
