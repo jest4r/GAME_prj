@@ -19,6 +19,8 @@
 					<Add directory="src/Graphics" />
 					<Add directory="src/Physics" />
 					<Add directory="src/Object" />
+					<Add directory="src/Character" />
+					<Add directory="src/Animation" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -34,6 +36,8 @@
 					<Add directory="src/Graphics" />
 					<Add directory="src/Physics" />
 					<Add directory="src/Object" />
+					<Add directory="src/Character" />
+					<Add directory="src/Animation" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -52,6 +56,11 @@
 			<Add directory="../../../../../Jester/Code block/SDL2_image-2.6.3/x86_64-w64-mingw32/lib" />
 		</Linker>
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Animation/Animation.cpp" />
+		<Unit filename="src/Animation/Animation.h" />
+		<Unit filename="src/Character/Character.h" />
+		<Unit filename="src/Character/Player.cpp" />
+		<Unit filename="src/Character/Player.h" />
 		<Unit filename="src/Core/Engine.cpp" />
 		<Unit filename="src/Core/Engine.h" />
 		<Unit filename="src/Graphics/TextureManager.cpp" />

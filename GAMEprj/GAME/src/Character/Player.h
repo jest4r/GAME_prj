@@ -2,6 +2,7 @@
 #define PLAYER_H
 
 #include "Character.h"
+#include <Animation.h>
 class player: public Character
 {
     public:
@@ -11,8 +12,9 @@ class player: public Character
         virtual void Update(float dt);
 
     private:
-         int m_row, m_frame, m_frameCount;
-         int m_aniSpeed;
+       //  int m_row, m_frame, m_frameCount;
+        // int m_aniSpeed;
+        Animation* m_Animation;
 };
 
-#endif /
+#endif

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1678743772 source:d:\j\c++\game\gameprj\game\main.cpp
+1678973099 source:d:\j\c++\game\gameprj\game\main.cpp
 	"Engine.h"
 	<iostream>
 
@@ -398,7 +398,7 @@
 
 1678743175 d:\j\c++\game\gameprj\game\source\core\engine.h
 
-1678887544 source:d:\j\c++\game\gameprj\game\src\core\engine.cpp
+1679346406 source:d:\j\c++\game\gameprj\game\src\core\engine.cpp
 	"Engine.h"
 	"TextureManager.h"
 	<iostream>
@@ -406,8 +406,9 @@
 	<SDL_image.h>
 	<vector2D.h>
 	<transform.h>
+	<Player.h>
 
-1678883039 d:\j\c++\game\gameprj\game\src\core\engine.h
+1678973099 d:\j\c++\game\gameprj\game\src\core\engine.h
 	"SDL.h"
 
 1675730672 d:\jester\code block\sdl2_image-2.6.3\x86_64-w64-mingw32\include\sdl2\sdl_image.h
@@ -416,24 +417,25 @@
 	"begin_code.h"
 	"close_code.h"
 
-1678817257 d:\j\c++\game\gameprj\game\src\graphics\texturemanager.h
+1679136776 d:\j\c++\game\gameprj\game\src\graphics\texturemanager.h
 	<string>
 	<SDL.h>
 	<map>
 
-1678817779 source:d:\j\c++\game\gameprj\game\src\graphics\texturemanager.cpp
+1679136789 source:d:\j\c++\game\gameprj\game\src\graphics\texturemanager.cpp
 	"TextureManager.h"
 	"Engine.h"
+	<string>
 	<SDL.h>
 	<SDL_image.h>
 
-1678886799 source:d:\j\c++\game\gameprj\game\src\physics\vector2d.cpp
+1678973099 source:d:\j\c++\game\gameprj\game\src\physics\vector2d.cpp
 	"vector2D.h"
 
-1678887511 d:\j\c++\game\gameprj\game\src\physics\vector2d.h
+1678973099 d:\j\c++\game\gameprj\game\src\physics\vector2d.h
 	<iostream>
 
-1678887780 d:\j\c++\game\gameprj\game\src\physics\transform.h
+1678973099 d:\j\c++\game\gameprj\game\src\physics\transform.h
 	<vector2D.h>
 
 1678973099 source:d:\j\c++\game_prj-game\gameprj\game\main.cpp
@@ -497,4 +499,37 @@
 
 1679134595 d:\j\c++\game_prj-game\gameprj\game\src\character\player.h
 	"Character.h"
+
+1679134760 source:d:\j\c++\game\gameprj\game\src\character\character.cpp
+	"Character.h"
+
+1679344714 d:\j\c++\game\gameprj\game\src\character\character.h
+	"GameObject.h"
+	<string>
+
+1679134773 d:\j\c++\game\gameprj\game\src\object\gameobject.h
+	<string>
+	"IObject.h"
+	"transform.h"
+	"SDL.h"
+
+1679079384 d:\j\c++\game\gameprj\game\src\object\iobject.h
+	<SDL.h>
+
+1679346425 source:d:\j\c++\game\gameprj\game\src\character\player.cpp
+	"Player.h"
+	"TextureManager.h"
+	"SDL.h"
+
+1679345906 d:\j\c++\game\gameprj\game\src\character\player.h
+	"Character.h"
+	<Animation.h>
+
+1679345906 d:\j\c++\game\gameprj\game\src\animation\animation.h
+	<string>
+	<SDL.h>
+
+1679345672 source:d:\j\c++\game\gameprj\game\src\animation\animation.cpp
+	"Animation.h"
+	"TextureManager.h"
 

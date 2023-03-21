@@ -4,20 +4,19 @@
 
 player::player(Properties* props): Character(props)
 {
-    m_row = 1;
-    m_frameCount = 10;
-    m_aniSpeed = 50;
+    m_Animation = new Animation();
+    m_Animation->SetProps(m_TextureID, 1, 6, 80, SDL_FLIP_NONE);
 }
 
 void player::Draw()
 {
-    TextureManager::GetInstance()->DrawFrame(m_TextureID, m_transform->X, m_transform->Y, m_width, m_height, m_row, m_frame);
+    m_Animation->Draw(m_transform->X, m_transform->Y, m_width, m_height);
 }
 
 
 void player::Update(float dt)
 {
-    m_frame = (SDL_GetTicks()/m_aniSpeed) % m_frameCount;
+    m_Animation->Update();
 }
 
 void player::Clean()
