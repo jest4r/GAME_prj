@@ -398,7 +398,7 @@
 
 1678743175 d:\j\c++\game\gameprj\game\source\core\engine.h
 
-1679384934 source:d:\j\c++\game\gameprj\game\src\core\engine.cpp
+1679388343 source:d:\j\c++\game\gameprj\game\src\core\engine.cpp
 	"Engine.h"
 	"TextureManager.h"
 	<iostream>
@@ -407,8 +407,9 @@
 	<vector2D.h>
 	<transform.h>
 	<Player.h>
+	"Input.h"
 
-1678973099 d:\j\c++\game\gameprj\game\src\core\engine.h
+1679388407 d:\j\c++\game\gameprj\game\src\core\engine.h
 	"SDL.h"
 
 1675730672 d:\jester\code block\sdl2_image-2.6.3\x86_64-w64-mingw32\include\sdl2\sdl_image.h
@@ -516,7 +517,7 @@
 1679079384 d:\j\c++\game\gameprj\game\src\object\iobject.h
 	<SDL.h>
 
-1679346425 source:d:\j\c++\game\gameprj\game\src\character\player.cpp
+1679387148 source:d:\j\c++\game\gameprj\game\src\character\player.cpp
 	"Player.h"
 	"TextureManager.h"
 	"SDL.h"
@@ -536,4 +537,11 @@
 
 1679386556 d:\j\c++\game\gameprj\game\src\physics\rigidbody.h
 	"vector2D.h"
+
+1679388377 d:\j\c++\game\gameprj\game\src\inputs\input.h
+	<SDL.h>
+
+1679388581 source:d:\j\c++\game\gameprj\game\src\inputs\input.cpp
+	"Input.h"
+	"Engine.h"
 

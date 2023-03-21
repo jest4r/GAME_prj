@@ -6,6 +6,7 @@
 #include <vector2D.h>
 #include <transform.h>
 #include <Player.h>
+#include "Input.h"
 Engine* Engine::s_Instance = NULL;
 player* player1 = NULL;
 bool Engine::Init(){
@@ -34,6 +35,10 @@ bool Engine::Init(){
 
 void Engine::Update(){
      //SDL_Log("Dit con me may");
+     if (Input::GetInstance()->GetKeyDown(SDL_SCANCODE_UP))
+         {
+             SDL_Log("Key up pushed");
+         }
      player1->Update(0);
 }
 
@@ -45,13 +50,7 @@ void Engine::Render(){
 }
 
 void Engine::Events(){
-    SDL_Event event;
-    SDL_PollEvent(&event);
-    switch (event.type){
-        case SDL_QUIT:
-        Quit();
-        break;
-    }
+    Input::GetInstance()->Listen();
 }
 
 bool Engine::Clean(){

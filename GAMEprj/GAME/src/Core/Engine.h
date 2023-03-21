@@ -2,8 +2,8 @@
 #define ENGINE_H
 
 #include "SDL.h"
-#define SCREEN_WIDTH 960
-#define SCREEN_HEIGHT 840
+#define SCREEN_WIDTH 740
+#define SCREEN_HEIGHT 740
 class Engine {
 
     public:
