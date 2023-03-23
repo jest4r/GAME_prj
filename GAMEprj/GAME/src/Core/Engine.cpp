@@ -7,6 +7,7 @@
 #include <transform.h>
 #include <Player.h>
 #include "Input.h"
+#include "Timer.h"
 Engine* Engine::s_Instance = NULL;
 player* player1 = NULL;
 bool Engine::Init(){
@@ -15,7 +16,6 @@ bool Engine::Init(){
         SDL_Log("Fail to initialize SDL: %s", SDL_GetError());
         return false;
     }
-
     m_Window = SDL_CreateWindow("My lesson", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_HEIGHT, SCREEN_HEIGHT, 0);
     if (m_Window ==  NULL)
     {
@@ -26,8 +26,9 @@ bool Engine::Init(){
     {
         SDL_Log("Fail to create renderer: %s", SDL_GetError());
     }
-    TextureManager::GetInstance()->Load("player", "assets/check.png");
-    player1 = new player(new Properties("player", 100, 200, 48, 86));
+    TextureManager::GetInstance()->Load("player", "assets/_idle.png");
+    TextureManager::GetInstance()->Load("player_run", "assets/_run.png");
+    player1 = new player(new Properties("player", 100, 200, 120, 120));
     transform tf;
     tf.Log();
     return m_IsRunning = true;
@@ -35,11 +36,8 @@ bool Engine::Init(){
 
 void Engine::Update(){
      //SDL_Log("Dit con me may");
-     if (Input::GetInstance()->GetKeyDown(SDL_SCANCODE_UP))
-         {
-             SDL_Log("Key up pushed");
-         }
-     player1->Update(0);
+     float dt = Timer::GetInstance()->GetDeltatime();
+     player1->Update(dt);
 }
 
 void Engine::Render(){
