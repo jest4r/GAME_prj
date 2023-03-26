@@ -399,7 +399,7 @@
 
 1678743175 d:\j\c++\game\gameprj\game\source\core\engine.h
 
-1679556674 source:d:\j\c++\game\gameprj\game\src\core\engine.cpp
+1679851695 source:d:\j\c++\game\gameprj\game\src\core\engine.cpp
 	"Engine.h"
 	"TextureManager.h"
 	<iostream>
@@ -410,9 +410,11 @@
 	<Player.h>
 	"Input.h"
 	"Timer.h"
+	"MapParser.h"
 
-1679388407 d:\j\c++\game\gameprj\game\src\core\engine.h
+1679844804 d:\j\c++\game\gameprj\game\src\core\engine.h
 	"SDL.h"
+	"GameMap.h"
 
 1675730672 d:\jester\code block\sdl2_image-2.6.3\x86_64-w64-mingw32\include\sdl2\sdl_image.h
 	"SDL.h"
@@ -420,12 +422,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1679136776 d:\j\c++\game\gameprj\game\src\graphics\texturemanager.h
+1679844406 d:\j\c++\game\gameprj\game\src\graphics\texturemanager.h
 	<string>
 	<SDL.h>
 	<map>
 
-1679136789 source:d:\j\c++\game\gameprj\game\src\graphics\texturemanager.cpp
+1679850544 source:d:\j\c++\game\gameprj\game\src\graphics\texturemanager.cpp
 	"TextureManager.h"
 	"Engine.h"
 	<string>
@@ -559,8 +561,59 @@
 
 1679547532 d:\j\c++\game\gameprj\game\src\map\layer.h
 
-1679547550 source:d:\j\c++\game\gameprj\game\src\map\tilelayer.cpp
+1679851303 source:d:\j\c++\game\gameprj\game\src\map\tilelayer.cpp
 	"TileLayer.h"
+	"TextureManager.h"
 
-1679547532 d:\j\c++\game\gameprj\game\src\map\tilelayer.h
+1679849121 d:\j\c++\game\gameprj\game\src\map\tilelayer.h
+	"Layer.h"
+	<string>
+	<vector>
+
+1376507762 source:d:\j\c++\game\gameprj\game\src\vendor\tinyxml-master\tinystr.cpp
+	"tinystr.h"
+
+1376507762 d:\j\c++\game\gameprj\game\src\vendor\tinyxml-master\tinystr.h
+	<assert.h>
+	<string.h>
+
+1376507762 source:d:\j\c++\game\gameprj\game\src\vendor\tinyxml-master\tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1679849572 d:\j\c++\game\gameprj\game\src\vendor\tinyxml-master\tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1376507762 source:d:\j\c++\game\gameprj\game\src\vendor\tinyxml-master\tinyxmlerror.cpp
+	"tinyxml.h"
+
+1376507762 source:d:\j\c++\game\gameprj\game\src\vendor\tinyxml-master\tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
+1679850012 source:d:\j\c++\game\gameprj\game\src\map\mapparser.cpp
+	"MapParser.h"
+
+1679850012 d:\j\c++\game\gameprj\game\src\map\mapparser.h
+	<map>
+	<string>
+	"GameMap.h"
+	<TileLayer.h>
+	"tinyxml.h"
+
+1679849121 d:\j\c++\game\gameprj\game\src\map\gamemap.h
+	<vector>
+	"Layer.h"
 

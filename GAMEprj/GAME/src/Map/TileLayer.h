@@ -7,14 +7,14 @@
 
 struct Tileset
 {
-    int First, LastID;
+    int FirstID, LastID;
     int RowCount, ColCount;
     int TileCount, TileSize;
     std::string Name, Source;
 };
 
 using TilesetList = std::vector<Tileset>;
-using TileMap = std::vector<std::vector<int>>;
+using TileMap = std::vector<std::vector<int> >;
 
 class TileLayer: public Layer
 {
