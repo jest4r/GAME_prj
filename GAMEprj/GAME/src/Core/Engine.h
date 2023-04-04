@@ -3,8 +3,8 @@
 
 #include "SDL.h"
 #include "GameMap.h"
-#define SCREEN_WIDTH 740
-#define SCREEN_HEIGHT 740
+#define SCREEN_WIDTH 960
+#define SCREEN_HEIGHT 640
 class Engine {
 
     public:
@@ -19,7 +19,7 @@ class Engine {
         void Update();
         void Render();
         void Events();
-
+        inline GameMap* GetMap(){return m_LevelMap;}
         inline bool IsRunning(){return m_IsRunning;}
         inline SDL_Renderer* GetRenderer() {return m_Renderer;}
 

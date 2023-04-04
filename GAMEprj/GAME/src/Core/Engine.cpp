@@ -9,6 +9,7 @@
 #include "Input.h"
 #include "Timer.h"
 #include "MapParser.h"
+#include "Camera.h"
 Engine* Engine::s_Instance = NULL;
 player* player1 = NULL;
 bool Engine::Init(){
@@ -39,9 +40,9 @@ bool Engine::Init(){
 
     TextureManager::GetInstance()->Load("player", "assets/_idle.png");
     TextureManager::GetInstance()->Load("player_run", "assets/_run.png");
+    TextureManager::GetInstance()->Load("bg", "assets/bg.png");
     player1 = new player(new Properties("player", 100, 180, 120, 120));
-    transform tf;
-    tf.Log();
+    Camera::GetInstance()->SetTarget(player1->GetOrigin());
     return m_IsRunning = true;
 }
 
@@ -50,11 +51,13 @@ void Engine::Update(){
      float dt = Timer::GetInstance()->GetDeltatime();
      player1->Update(dt);
      m_LevelMap->Update();
+     Camera::GetInstance()->Update(dt);
 }
 
 void Engine::Render(){
     SDL_SetRenderDrawColor(m_Renderer, 124, 218, 254, 255);
     SDL_RenderClear(m_Renderer);
+    TextureManager::GetInstance()->Draw("bg", 0, 0, 2150, 1050);
     m_LevelMap->Render();
     player1->Draw();
     SDL_RenderPresent(m_Renderer);

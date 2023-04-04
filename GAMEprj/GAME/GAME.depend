@@ -399,7 +399,7 @@
 
 1678743175 d:\j\c++\game\gameprj\game\source\core\engine.h
 
-1679851695 source:d:\j\c++\game\gameprj\game\src\core\engine.cpp
+1680594751 source:d:\j\c++\game\gameprj\game\src\core\engine.cpp
 	"Engine.h"
 	"TextureManager.h"
 	<iostream>
@@ -411,8 +411,9 @@
 	"Input.h"
 	"Timer.h"
 	"MapParser.h"
+	"Camera.h"
 
-1679844804 d:\j\c++\game\gameprj\game\src\core\engine.h
+1680019004 d:\j\c++\game\gameprj\game\src\core\engine.h
 	"SDL.h"
 	"GameMap.h"
 
@@ -427,12 +428,13 @@
 	<SDL.h>
 	<map>
 
-1679850544 source:d:\j\c++\game\gameprj\game\src\graphics\texturemanager.cpp
+1679939105 source:d:\j\c++\game\gameprj\game\src\graphics\texturemanager.cpp
 	"TextureManager.h"
 	"Engine.h"
 	<string>
 	<SDL.h>
 	<SDL_image.h>
+	"Camera.h"
 
 1678973099 source:d:\j\c++\game\gameprj\game\src\physics\vector2d.cpp
 	"vector2D.h"
@@ -512,25 +514,31 @@
 	"GameObject.h"
 	<string>
 
-1679134773 d:\j\c++\game\gameprj\game\src\object\gameobject.h
+1679938475 d:\j\c++\game\gameprj\game\src\object\gameobject.h
 	<string>
 	"IObject.h"
 	"transform.h"
 	"SDL.h"
+	"Point.h"
 
 1679079384 d:\j\c++\game\gameprj\game\src\object\iobject.h
 	<SDL.h>
 
-1679556499 source:d:\j\c++\game\gameprj\game\src\character\player.cpp
+1680600040 source:d:\j\c++\game\gameprj\game\src\character\player.cpp
 	"Player.h"
 	"TextureManager.h"
 	"SDL.h"
 	"Input.h"
+	"Engine.h"
+	"Camera.h"
+	"CollisionHandler.h"
 
-1679553691 d:\j\c++\game\gameprj\game\src\character\player.h
+1680595110 d:\j\c++\game\gameprj\game\src\character\player.h
 	"Character.h"
 	<Animation.h>
 	"RigidBody.h"
+	"Collider.h"
+	"vector2D.h"
 
 1679345906 d:\j\c++\game\gameprj\game\src\animation\animation.h
 	<string>
@@ -540,7 +548,7 @@
 	"Animation.h"
 	"TextureManager.h"
 
-1679555308 d:\j\c++\game\gameprj\game\src\physics\rigidbody.h
+1680596629 d:\j\c++\game\gameprj\game\src\physics\rigidbody.h
 	"vector2D.h"
 
 1679388377 d:\j\c++\game\gameprj\game\src\inputs\input.h
@@ -550,9 +558,9 @@
 	"Input.h"
 	"Engine.h"
 
-1679500031 d:\j\c++\game\gameprj\game\src\timer\timer.h
+1679939302 d:\j\c++\game\gameprj\game\src\timer\timer.h
 
-1679500124 source:d:\j\c++\game\gameprj\game\src\timer\timer.cpp
+1679939326 source:d:\j\c++\game\gameprj\game\src\timer\timer.cpp
 	"Timer.h"
 	<SDL.h>
 
@@ -561,11 +569,11 @@
 
 1679547532 d:\j\c++\game\gameprj\game\src\map\layer.h
 
-1679851303 source:d:\j\c++\game\gameprj\game\src\map\tilelayer.cpp
+1680599255 source:d:\j\c++\game\gameprj\game\src\map\tilelayer.cpp
 	"TileLayer.h"
 	"TextureManager.h"
 
-1679849121 d:\j\c++\game\gameprj\game\src\map\tilelayer.h
+1680598829 d:\j\c++\game\gameprj\game\src\map\tilelayer.h
 	"Layer.h"
 	<string>
 	<vector>
@@ -616,4 +624,33 @@
 1679849121 d:\j\c++\game\gameprj\game\src\map\gamemap.h
 	<vector>
 	"Layer.h"
+
+1679937422 source:d:\j\c++\game\gameprj\game\src\physics\point.cpp
+	"Point.h"
+
+1680599681 d:\j\c++\game\gameprj\game\src\physics\point.h
+	<string>
+	<iostream>
+
+1679938002 source:d:\j\c++\game\gameprj\game\src\camera\camera.cpp
+	"Camera.h"
+
+1679938477 d:\j\c++\game\gameprj\game\src\camera\camera.h
+	"SDL.h"
+	"Point.h"
+	"vector2D.h"
+	"Engine.h"
+
+1680094292 d:\j\c++\game\gameprj\game\src\physics\collider.h
+	"SDL.h"
+
+1680599925 source:d:\j\c++\game\gameprj\game\src\collision\collisionhandler.cpp
+	"CollisionHandler.h"
+	"Engine.h"
+
+1680594751 d:\j\c++\game\gameprj\game\src\collision\collisionhandler.h
+	"SDL.h"
+	<vector>
+	"TileLayer.h"
+	"GameMap.h"
 

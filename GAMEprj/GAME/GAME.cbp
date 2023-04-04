@@ -26,6 +26,8 @@
 					<Add directory="src/Map" />
 					<Add directory="assets/maps" />
 					<Add directory="src/Vendor/tinyxml-master" />
+					<Add directory="src/Camera" />
+					<Add directory="src/Collision" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -47,6 +49,8 @@
 					<Add directory="src/Timer" />
 					<Add directory="src/Map" />
 					<Add directory="assets/maps" />
+					<Add directory="src/Camera" />
+					<Add directory="src/Collision" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -67,9 +71,13 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Animation/Animation.cpp" />
 		<Unit filename="src/Animation/Animation.h" />
+		<Unit filename="src/Camera/Camera.cpp" />
+		<Unit filename="src/Camera/Camera.h" />
 		<Unit filename="src/Character/Character.h" />
 		<Unit filename="src/Character/Player.cpp" />
 		<Unit filename="src/Character/Player.h" />
+		<Unit filename="src/Collision/CollisionHandler.cpp" />
+		<Unit filename="src/Collision/CollisionHandler.h" />
 		<Unit filename="src/Core/Engine.cpp" />
 		<Unit filename="src/Core/Engine.h" />
 		<Unit filename="src/Graphics/TextureManager.cpp" />
@@ -85,6 +93,9 @@
 		<Unit filename="src/Map/TileLayer.h" />
 		<Unit filename="src/Object/GameObject.h" />
 		<Unit filename="src/Object/IObject.h" />
+		<Unit filename="src/Physics/Collider.h" />
+		<Unit filename="src/Physics/Point.cpp" />
+		<Unit filename="src/Physics/Point.h" />
 		<Unit filename="src/Physics/RigidBody.h" />
 		<Unit filename="src/Physics/transform.h" />
 		<Unit filename="src/Physics/vector2D.cpp" />

@@ -4,6 +4,11 @@
 #include "Character.h"
 #include <Animation.h>
 #include "RigidBody.h"
+#include "Collider.h"
+#include "vector2D.h"
+
+#define JUMP_TIME 15.0f;
+#define JUMP_FORCE 10.0f
 class player: public Character
 {
     public:
@@ -13,10 +18,18 @@ class player: public Character
         virtual void Update(float dt);
 
     private:
-       //  int m_row, m_frame, m_frameCount;
-        // int m_aniSpeed;
+        bool m_isJumping;
+        bool m_isGrounded;
+
+        float m_jumptime;
+        float m_jumpforce;
+
+
+        Collider* m_collider;
         Animation* m_Animation;
         RigidBody* m_RigidBody;
+
+        vector2D m_LastSafePosition;
 };
 
 #endif
