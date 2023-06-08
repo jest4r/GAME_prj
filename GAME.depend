@@ -399,7 +399,7 @@
 
 1678743175 d:\j\c++\game\gameprj\game\source\core\engine.h
 
-1679556369 source:d:\j\c++\game\gameprj\game\src\core\engine.cpp
+1680696465 source:d:\j\c++\game\gameprj\game\src\core\engine.cpp
 	"Engine.h"
 	"TextureManager.h"
 	<iostream>
@@ -410,9 +410,12 @@
 	<Player.h>
 	"Input.h"
 	"Timer.h"
+	"MapParser.h"
+	"Camera.h"
 
-1679388407 d:\j\c++\game\gameprj\game\src\core\engine.h
+1680019004 d:\j\c++\game\gameprj\game\src\core\engine.h
 	"SDL.h"
+	"GameMap.h"
 
 1675730672 d:\jester\code block\sdl2_image-2.6.3\x86_64-w64-mingw32\include\sdl2\sdl_image.h
 	"SDL.h"
@@ -420,17 +423,18 @@
 	"begin_code.h"
 	"close_code.h"
 
-1679136776 d:\j\c++\game\gameprj\game\src\graphics\texturemanager.h
+1679844406 d:\j\c++\game\gameprj\game\src\graphics\texturemanager.h
 	<string>
 	<SDL.h>
 	<map>
 
-1679136789 source:d:\j\c++\game\gameprj\game\src\graphics\texturemanager.cpp
+1679939105 source:d:\j\c++\game\gameprj\game\src\graphics\texturemanager.cpp
 	"TextureManager.h"
 	"Engine.h"
 	<string>
 	<SDL.h>
 	<SDL_image.h>
+	"Camera.h"
 
 1678973099 source:d:\j\c++\game\gameprj\game\src\physics\vector2d.cpp
 	"vector2D.h"
@@ -510,47 +514,53 @@
 	"GameObject.h"
 	<string>
 
-1679134773 d:\j\c++\game\gameprj\game\src\object\gameobject.h
+1679938475 d:\j\c++\game\gameprj\game\src\object\gameobject.h
 	<string>
 	"IObject.h"
 	"transform.h"
 	"SDL.h"
+	"Point.h"
 
 1679079384 d:\j\c++\game\gameprj\game\src\object\iobject.h
 	<SDL.h>
 
-1679556499 source:d:\j\c++\game\gameprj\game\src\character\player.cpp
+1680696465 source:d:\j\c++\game\gameprj\game\src\character\player.cpp
 	"Player.h"
 	"TextureManager.h"
 	"SDL.h"
 	"Input.h"
+	"Engine.h"
+	"Camera.h"
+	"CollisionHandler.h"
 
-1679553691 d:\j\c++\game\gameprj\game\src\character\player.h
+1680602690 d:\j\c++\game\gameprj\game\src\character\player.h
 	"Character.h"
 	<Animation.h>
 	"RigidBody.h"
+	"Collider.h"
+	"vector2D.h"
 
-1679345906 d:\j\c++\game\gameprj\game\src\animation\animation.h
+1680602664 d:\j\c++\game\gameprj\game\src\animation\animation.h
 	<string>
 	<SDL.h>
 
-1679345672 source:d:\j\c++\game\gameprj\game\src\animation\animation.cpp
+1680602668 source:d:\j\c++\game\gameprj\game\src\animation\animation.cpp
 	"Animation.h"
 	"TextureManager.h"
 
-1679555308 d:\j\c++\game\gameprj\game\src\physics\rigidbody.h
+1680696906 d:\j\c++\game\gameprj\game\src\physics\rigidbody.h
 	"vector2D.h"
 
-1679388377 d:\j\c++\game\gameprj\game\src\inputs\input.h
+1680602649 d:\j\c++\game\gameprj\game\src\inputs\input.h
 	<SDL.h>
 
-1679388581 source:d:\j\c++\game\gameprj\game\src\inputs\input.cpp
+1680602631 source:d:\j\c++\game\gameprj\game\src\inputs\input.cpp
 	"Input.h"
 	"Engine.h"
 
-1679500031 d:\j\c++\game\gameprj\game\src\timer\timer.h
+1679939302 d:\j\c++\game\gameprj\game\src\timer\timer.h
 
-1679500124 source:d:\j\c++\game\gameprj\game\src\timer\timer.cpp
+1679939326 source:d:\j\c++\game\gameprj\game\src\timer\timer.cpp
 	"Timer.h"
 	<SDL.h>
 
@@ -559,8 +569,862 @@
 
 1679547532 d:\j\c++\game\gameprj\game\src\map\layer.h
 
-1679547550 source:d:\j\c++\game\gameprj\game\src\map\tilelayer.cpp
+1680599255 source:d:\j\c++\game\gameprj\game\src\map\tilelayer.cpp
 	"TileLayer.h"
+	"TextureManager.h"
 
-1679547532 d:\j\c++\game\gameprj\game\src\map\tilelayer.h
+1680598829 d:\j\c++\game\gameprj\game\src\map\tilelayer.h
+	"Layer.h"
+	<string>
+	<vector>
+
+1376507762 source:d:\j\c++\game\gameprj\game\src\vendor\tinyxml-master\tinystr.cpp
+	"tinystr.h"
+
+1376507762 d:\j\c++\game\gameprj\game\src\vendor\tinyxml-master\tinystr.h
+	<assert.h>
+	<string.h>
+
+1376507762 source:d:\j\c++\game\gameprj\game\src\vendor\tinyxml-master\tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1679849572 d:\j\c++\game\gameprj\game\src\vendor\tinyxml-master\tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1376507762 source:d:\j\c++\game\gameprj\game\src\vendor\tinyxml-master\tinyxmlerror.cpp
+	"tinyxml.h"
+
+1376507762 source:d:\j\c++\game\gameprj\game\src\vendor\tinyxml-master\tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
+1679850012 source:d:\j\c++\game\gameprj\game\src\map\mapparser.cpp
+	"MapParser.h"
+
+1679850012 d:\j\c++\game\gameprj\game\src\map\mapparser.h
+	<map>
+	<string>
+	"GameMap.h"
+	<TileLayer.h>
+	"tinyxml.h"
+
+1679849121 d:\j\c++\game\gameprj\game\src\map\gamemap.h
+	<vector>
+	"Layer.h"
+
+1679937422 source:d:\j\c++\game\gameprj\game\src\physics\point.cpp
+	"Point.h"
+
+1680599681 d:\j\c++\game\gameprj\game\src\physics\point.h
+	<string>
+	<iostream>
+
+1679938002 source:d:\j\c++\game\gameprj\game\src\camera\camera.cpp
+	"Camera.h"
+
+1679938477 d:\j\c++\game\gameprj\game\src\camera\camera.h
+	"SDL.h"
+	"Point.h"
+	"vector2D.h"
+	"Engine.h"
+
+1680094292 d:\j\c++\game\gameprj\game\src\physics\collider.h
+	"SDL.h"
+
+1680599925 source:d:\j\c++\game\gameprj\game\src\collision\collisionhandler.cpp
+	"CollisionHandler.h"
+	"Engine.h"
+
+1680594751 d:\j\c++\game\gameprj\game\src\collision\collisionhandler.h
+	"SDL.h"
+	<vector>
+	"TileLayer.h"
+	"GameMap.h"
+
+1679499791 source:d:\j\c++\game2\gameprj\game\main.cpp
+	"Engine.h"
+	"Timer.h"
+	<iostream>
+
+1680019004 d:\j\c++\game2\gameprj\game\src\core\engine.h
+	"SDL.h"
+	"GameMap.h"
+
+1679849121 d:\j\c++\game2\gameprj\game\src\map\gamemap.h
+	<vector>
+	"Layer.h"
+
+1679547532 d:\j\c++\game2\gameprj\game\src\map\layer.h
+
+1679939302 d:\j\c++\game2\gameprj\game\src\timer\timer.h
+
+1685170553 source:d:\j\c++\game2\gameprj\game\src\animation\animation.cpp
+	"Animation.h"
+	"TextureManager.h"
+
+1685170555 d:\j\c++\game2\gameprj\game\src\animation\animation.h
+	<string>
+	<SDL.h>
+
+1679844406 d:\j\c++\game2\gameprj\game\src\graphics\texturemanager.h
+	<string>
+	<SDL.h>
+	<map>
+
+1679938002 source:d:\j\c++\game2\gameprj\game\src\camera\camera.cpp
+	"Camera.h"
+
+1679938477 d:\j\c++\game2\gameprj\game\src\camera\camera.h
+	"SDL.h"
+	"Point.h"
+	"vector2D.h"
+	"Engine.h"
+
+1680599681 d:\j\c++\game2\gameprj\game\src\physics\point.h
+	<string>
+	<iostream>
+
+1678973099 d:\j\c++\game2\gameprj\game\src\physics\vector2d.h
+	<iostream>
+
+1685262349 source:d:\j\c++\game2\gameprj\game\src\character\player.cpp
+	"Player.h"
+	"TextureManager.h"
+	"SDL.h"
+	"Input.h"
+	"Engine.h"
+	"Camera.h"
+	"CollisionHandler.h"
+
+1680602690 d:\j\c++\game2\gameprj\game\src\character\player.h
+	"Character.h"
+	<Animation.h>
+	"RigidBody.h"
+	"Collider.h"
+	"vector2D.h"
+
+1684900900 d:\j\c++\game2\gameprj\game\src\character\character.h
+	"GameObject.h"
+	<string>
+
+1679938475 d:\j\c++\game2\gameprj\game\src\object\gameobject.h
+	<string>
+	"IObject.h"
+	"transform.h"
+	"SDL.h"
+	"Point.h"
+
+1679079384 d:\j\c++\game2\gameprj\game\src\object\iobject.h
+	<SDL.h>
+
+1679386469 d:\j\c++\game2\gameprj\game\src\physics\transform.h
+	<vector2D.h>
+
+1685169058 d:\j\c++\game2\gameprj\game\src\physics\rigidbody.h
+	"vector2D.h"
+
+1680094292 d:\j\c++\game2\gameprj\game\src\physics\collider.h
+	"SDL.h"
+
+1685417293 d:\j\c++\game2\gameprj\game\src\inputs\input.h
+	<SDL.h>
+
+1680594751 d:\j\c++\game2\gameprj\game\src\collision\collisionhandler.h
+	"SDL.h"
+	<vector>
+	"TileLayer.h"
+	"GameMap.h"
+
+1680598829 d:\j\c++\game2\gameprj\game\src\map\tilelayer.h
+	"Layer.h"
+	<string>
+	<vector>
+
+1680599925 source:d:\j\c++\game2\gameprj\game\src\collision\collisionhandler.cpp
+	"CollisionHandler.h"
+	"Engine.h"
+
+1685261756 source:d:\j\c++\game2\gameprj\game\src\core\engine.cpp
+	"Engine.h"
+	"TextureManager.h"
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<vector2D.h>
+	<transform.h>
+	<Player.h>
+	"Input.h"
+	"Timer.h"
+	"MapParser.h"
+	"Camera.h"
+
+1679850012 d:\j\c++\game2\gameprj\game\src\map\mapparser.h
+	<map>
+	<string>
+	"GameMap.h"
+	<TileLayer.h>
+	"tinyxml.h"
+
+1679849572 d:\j\c++\game2\gameprj\game\src\vendor\tinyxml-master\tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1376507762 d:\j\c++\game2\gameprj\game\src\vendor\tinyxml-master\tinystr.h
+	<assert.h>
+	<string.h>
+
+1685172864 source:d:\j\c++\game2\gameprj\game\src\graphics\texturemanager.cpp
+	"TextureManager.h"
+	"Engine.h"
+	<string>
+	<SDL.h>
+	<SDL_image.h>
+	"Camera.h"
+
+1685417305 source:d:\j\c++\game2\gameprj\game\src\inputs\input.cpp
+	"Input.h"
+	"Engine.h"
+
+1679547546 source:d:\j\c++\game2\gameprj\game\src\map\layer.cpp
+	"Layer.h"
+
+1679850012 source:d:\j\c++\game2\gameprj\game\src\map\mapparser.cpp
+	"MapParser.h"
+
+1680599255 source:d:\j\c++\game2\gameprj\game\src\map\tilelayer.cpp
+	"TileLayer.h"
+	"TextureManager.h"
+
+1679937422 source:d:\j\c++\game2\gameprj\game\src\physics\point.cpp
+	"Point.h"
+
+1678973099 source:d:\j\c++\game2\gameprj\game\src\physics\vector2d.cpp
+	"vector2D.h"
+
+1679939326 source:d:\j\c++\game2\gameprj\game\src\timer\timer.cpp
+	"Timer.h"
+	<SDL.h>
+
+1376507762 source:d:\j\c++\game2\gameprj\game\src\vendor\tinyxml-master\tinystr.cpp
+	"tinystr.h"
+
+1376507762 source:d:\j\c++\game2\gameprj\game\src\vendor\tinyxml-master\tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1376507762 source:d:\j\c++\game2\gameprj\game\src\vendor\tinyxml-master\tinyxmlerror.cpp
+	"tinyxml.h"
+
+1376507762 source:d:\j\c++\game2\gameprj\game\src\vendor\tinyxml-master\tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
+1679499791 source:d:\j\game_final\main.cpp
+	"Engine.h"
+	"Timer.h"
+	<iostream>
+
+1680019004 d:\j\game_final\src\core\engine.h
+	"SDL.h"
+	"GameMap.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_gamecontroller.h"
+	"SDL_guid.h"
+	"SDL_haptic.h"
+	"SDL_hidapi.h"
+	"SDL_hints.h"
+	"SDL_joystick.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_metal.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_shape.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"SDL_locale.h"
+	"SDL_misc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<wchar.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+	<winsdkver.h>
+	<sdkddkver.h>
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_platform.h
+	<AvailabilityMacros.h>
+	<TargetConditionals.h>
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\begin_code.h
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\close_code.h
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_assert.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<sys/cpuinline.h>
+	<mbarrier.h>
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<endian.h>
+	<endian.h>
+	<sys/endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	<process.h>
+	<process.h>
+	<stdlib.h>
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<arm_neon.h>
+	<altivec.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<arm64intr.h>
+	<arm64_neon.h>
+	<mm3dnow.h>
+	<lsxintrin.h>
+	<lasxintrin.h>
+	<immintrin.h>
+	<mmintrin.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"SDL_endian.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_guid.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_guid.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_sensor.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_hidapi.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_metal.h
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_shape.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_locale.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1675723875 ..\..\..\..\..\jester\code block\sdl2-2.26.3\x86_64-w64-mingw32\include\sdl2\sdl_misc.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1679849121 d:\j\game_final\src\map\gamemap.h
+	<vector>
+	"Layer.h"
+
+1679547532 d:\j\game_final\src\map\layer.h
+
+1679939302 d:\j\game_final\src\timer\timer.h
+
+1685170553 source:d:\j\game_final\src\animation\animation.cpp
+	"Animation.h"
+	"TextureManager.h"
+
+1685170555 d:\j\game_final\src\animation\animation.h
+	<string>
+	<SDL.h>
+
+1685629975 d:\j\game_final\src\graphics\texturemanager.h
+	<string>
+	<SDL.h>
+	<map>
+
+1679938002 source:d:\j\game_final\src\camera\camera.cpp
+	"Camera.h"
+
+1679938477 d:\j\game_final\src\camera\camera.h
+	"SDL.h"
+	"Point.h"
+	"vector2D.h"
+	"Engine.h"
+
+1680599681 d:\j\game_final\src\physics\point.h
+	<string>
+	<iostream>
+
+1678973099 d:\j\game_final\src\physics\vector2d.h
+	<iostream>
+
+1685417586 source:d:\j\game_final\src\character\player.cpp
+	"Player.h"
+	"TextureManager.h"
+	"SDL.h"
+	"Input.h"
+	"Engine.h"
+	"Camera.h"
+	"CollisionHandler.h"
+
+1680602690 d:\j\game_final\src\character\player.h
+	"Character.h"
+	<Animation.h>
+	"RigidBody.h"
+	"Collider.h"
+	"vector2D.h"
+
+1684900900 d:\j\game_final\src\character\character.h
+	"GameObject.h"
+	<string>
+
+1679938475 d:\j\game_final\src\object\gameobject.h
+	<string>
+	"IObject.h"
+	"transform.h"
+	"SDL.h"
+	"Point.h"
+
+1679079384 d:\j\game_final\src\object\iobject.h
+	<SDL.h>
+
+1679386469 d:\j\game_final\src\physics\transform.h
+	<vector2D.h>
+
+1685169058 d:\j\game_final\src\physics\rigidbody.h
+	"vector2D.h"
+
+1680094292 d:\j\game_final\src\physics\collider.h
+	"SDL.h"
+
+1685417293 d:\j\game_final\src\inputs\input.h
+	<SDL.h>
+
+1680594751 d:\j\game_final\src\collision\collisionhandler.h
+	"SDL.h"
+	<vector>
+	"TileLayer.h"
+	"GameMap.h"
+
+1680598829 d:\j\game_final\src\map\tilelayer.h
+	"Layer.h"
+	<string>
+	<vector>
+
+1680599925 source:d:\j\game_final\src\collision\collisionhandler.cpp
+	"CollisionHandler.h"
+	"Engine.h"
+
+1685630002 source:d:\j\game_final\src\core\engine.cpp
+	"Engine.h"
+	"TextureManager.h"
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<vector2D.h>
+	<transform.h>
+	<Player.h>
+	"Input.h"
+	"Timer.h"
+	"MapParser.h"
+	"Camera.h"
+
+1675730672 ..\..\..\..\..\jester\code block\sdl2_image-2.6.3\x86_64-w64-mingw32\include\sdl2\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1679850012 d:\j\game_final\src\map\mapparser.h
+	<map>
+	<string>
+	"GameMap.h"
+	<TileLayer.h>
+	"tinyxml.h"
+
+1679849572 d:\j\game_final\src\vendor\tinyxml-master\tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1376507762 d:\j\game_final\src\vendor\tinyxml-master\tinystr.h
+	<assert.h>
+	<string.h>
+
+1685629975 source:d:\j\game_final\src\graphics\texturemanager.cpp
+	"TextureManager.h"
+	"Engine.h"
+	<string>
+	<SDL.h>
+	<SDL_image.h>
+	"Camera.h"
+	<tinyxml.h>
+
+1685417305 source:d:\j\game_final\src\inputs\input.cpp
+	"Input.h"
+	"Engine.h"
+
+1679547546 source:d:\j\game_final\src\map\layer.cpp
+	"Layer.h"
+
+1679850012 source:d:\j\game_final\src\map\mapparser.cpp
+	"MapParser.h"
+
+1680599255 source:d:\j\game_final\src\map\tilelayer.cpp
+	"TileLayer.h"
+	"TextureManager.h"
+
+1679937422 source:d:\j\game_final\src\physics\point.cpp
+	"Point.h"
+
+1678973099 source:d:\j\game_final\src\physics\vector2d.cpp
+	"vector2D.h"
+
+1679939326 source:d:\j\game_final\src\timer\timer.cpp
+	"Timer.h"
+	<SDL.h>
+
+1376507762 source:d:\j\game_final\src\vendor\tinyxml-master\tinystr.cpp
+	"tinystr.h"
+
+1376507762 source:d:\j\game_final\src\vendor\tinyxml-master\tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1376507762 source:d:\j\game_final\src\vendor\tinyxml-master\tinyxmlerror.cpp
+	"tinyxml.h"
+
+1376507762 source:d:\j\game_final\src\vendor\tinyxml-master\tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
 

@@ -8,6 +8,8 @@
 #include <Player.h>
 #include "Input.h"
 #include "Timer.h"
+#include "MapParser.h"
+#include "Camera.h"
 Engine* Engine::s_Instance = NULL;
 player* player1 = NULL;
 bool Engine::Init(){
@@ -16,21 +18,37 @@ bool Engine::Init(){
         SDL_Log("Fail to initialize SDL: %s", SDL_GetError());
         return false;
     }
-    m_Window = SDL_CreateWindow("My lesson", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_HEIGHT, SCREEN_HEIGHT, 0);
+    SDL_WindowFlags window_flags = (SDL_WindowFlags) (SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
+    m_Window = SDL_CreateWindow("My lesson", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, window_flags);
     if (m_Window ==  NULL)
     {
         SDL_Log("Fail to create window: %s", SDL_GetError());
+        return false;
     }
     m_Renderer = SDL_CreateRenderer(m_Window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     if (m_Renderer == NULL)
     {
         SDL_Log("Fail to create renderer: %s", SDL_GetError());
+        return false;
     }
-    TextureManager::GetInstance()->Load("player", "assets/_idle.png");
-    TextureManager::GetInstance()->Load("player_run", "assets/_run.png");
-    player1 = new player(new Properties("player", 100, 200, 120, 120));
-    transform tf;
-    tf.Log();
+
+    if (!MapParser::GetInstance()->Load()){
+
+        std::cout<< "Failed to load map" << std::endl;
+    }
+    m_LevelMap = MapParser::GetInstance()->GetMap("level1");
+    TextureManager::GetInstance()->ParseTexture("assets/texture.tml");
+    /*
+    TextureManager::GetInstance()->Load("player_idle", "assets/_Idle.png");
+    TextureManager::GetInstance()->Load("player_run", "assets/_Run.png");
+    TextureManager::GetInstance()->Load("player_jump", "assets/_jump.png");
+    TextureManager::GetInstance()->Load("player_fall", "assets/_fall.png");
+    TextureManager::GetInstance()->Load("player_crouch", "assets/_crouch.png");
+    TextureManager::GetInstance()->Load("player_attack", "assets/_attack.png");
+
+    TextureManager::GetInstance()->Load("bg", "assets/bg.png");*/
+    player1 = new player(new Properties("player_idle", 100, 180, 120, 120));
+    Camera::GetInstance()->SetTarget(player1->GetOrigin());
     return m_IsRunning = true;
 }
 
@@ -38,11 +56,15 @@ void Engine::Update(){
      //SDL_Log("Dit con me may");
      float dt = Timer::GetInstance()->GetDeltatime();
      player1->Update(dt);
+     m_LevelMap->Update();
+     Camera::GetInstance()->Update(dt);
 }
 
 void Engine::Render(){
     SDL_SetRenderDrawColor(m_Renderer, 124, 218, 254, 255);
     SDL_RenderClear(m_Renderer);
+    TextureManager::GetInstance()->Draw("bg", 0, 0, 2150, 1050, 2, 2, 0.4);
+    m_LevelMap->Render();
     player1->Draw();
     SDL_RenderPresent(m_Renderer);
 }

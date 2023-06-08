@@ -3,6 +3,8 @@
 
 #include <SDL.h>
 
+enum Axis {HORIZONTAL, VERTICAL};
+
 class Input
 {
     public:
@@ -11,13 +13,15 @@ class Input
         }
         void Listen();
         bool GetKeyDown(SDL_Scancode key);
-
-
+        bool GetMouseButtonDown(SDL_MouseButtonEvent button) const;
+        void HandleMouseEvent(const SDL_Event& event);
+        int GetAxisKey(Axis axis);
     private:
         Input();
         void KeyUp();
         void KeyDown();
         const Uint8* m_KeyStates;
+        const Uint8* m_MouseButtonStates;
         static Input* s_Instance;
 };
 
