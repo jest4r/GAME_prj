@@ -843,10 +843,10 @@
 	"tinyxml.h"
 	<windows.h>
 
-1679499791 source:d:\j\game_final\main.cpp
+1686480995 source:d:\j\game_final\main.cpp
+	<SDL.h>
 	"Engine.h"
 	"Timer.h"
-	<iostream>
 
 1680019004 d:\j\game_final\src\core\engine.h
 	"SDL.h"
@@ -1253,7 +1253,7 @@
 	"Animation.h"
 	"TextureManager.h"
 
-1685170555 d:\j\game_final\src\animation\animation.h
+1686233818 d:\j\game_final\src\animation\animation.h
 	<string>
 	<SDL.h>
 
@@ -1423,6 +1423,357 @@
 	"tinyxml.h"
 
 1376507762 source:d:\j\game_final\src\vendor\tinyxml-master\tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
+1686480677 d:\j\game_final\core\engine.h
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	"State.h"
+
+1686480677 d:\j\game_final\state\state.h
+
+1686480677 d:\j\game_final\core\timer.h
+
+1686480699 source:d:\j\game_final\core\timer.cpp
+	"Timer.h"
+	"SDL.h"
+
+1675732513 d:\jester\code block\sdl2_ttf-2.20.2\x86_64-w64-mingw32\include\sdl2\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1686480677 source:d:\j\game_final\character\input.cpp
+	"Input.h"
+	"Engine.h"
+	<iostream>
+
+1686480684 d:\j\game_final\character\input.h
+	"SDL.h"
+	"Vector2d.h"
+
+1686480677 d:\j\game_final\physics\vector2d.h
+	<iostream>
+
+1686480538 source:d:\j\game_final\core\input.cpp
+	"Input.h"
+	"Engine.h"
+	<iostream>
+
+1686480677 d:\j\game_final\core\input.h
+	"SDL.h"
+	"Vector2d.h"
+
+1686480675 source:d:\j\game_final\sound\sound.cpp
+	"Sound.h"
+
+1686480098 d:\j\game_final\sound\sound.h
+	<map>
+	<string>
+	<iostream>
+	<SDL_mixer.h>
+
+1686481739 d:\j\game_final\\map
+
+1675731449 d:\jester\code block\sdl2_mixer-2.6.3\x86_64-w64-mingw32\include\sdl2\sdl_mixer.h
+	"SDL_stdinc.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1686480677 source:d:\j\game_final\character\enemy.cpp
+	<SDL.h>
+	<math.h>
+	"Enemy.h"
+	"Texture.h"
+	"Input.h"
+	"Camera.h"
+	"CollisionHandler.h"
+	<iostream>
+
+1686480677 d:\j\game_final\character\enemy.h
+	"Character.h"
+	"RigidBody.h"
+	"Collider.h"
+	"Animation.h"
+	"Vector2d.h"
+	"Player.h"
+
+1686480677 d:\j\game_final\character\character.h
+	"GameObject.h"
+	<string>
+
+1686480688 d:\j\game_final\object\gameobject.h
+	"IObject.h"
+	"Transform.h"
+	"SDL.h"
+	"Point.h"
+
+1686480677 d:\j\game_final\object\iobject.h
+
+1686480677 d:\j\game_final\physics\transform.h
+	"Vector2D.h"
+	<string>
+	<iostream>
+
+1686480944 d:\j\game_final\core\point.h
+	<iostream>
+
+1686480677 d:\j\game_final\physics\rigidbody.h
+	"Vector2D.h"
+
+1686480703 d:\j\game_final\physics\collider.h
+	"SDL.h"
+	"Engine.h"
+	"Camera.h"
+	"Vector2D.h"
+
+1686480901 d:\j\game_final\core\camera.h
+	"Point.h"
+	"Vector2D.h"
+	"SDL.h"
+	"Engine.h"
+
+1686480904 d:\j\game_final\texture\animation.h
+	"SDL.h"
+	<string>
+
+1686480677 d:\j\game_final\character\player.h
+	<iostream>
+	<set>
+	"Character.h"
+	"Animation.h"
+	"RigidBody.h"
+	"Collider.h"
+	"Vector2D.h"
+	"Attack.h"
+
+1686481063 d:\j\game_final\attack\attack.h
+	"Vector2d.h"
+	"GameObject.h"
+	"Texture.h"
+	"Collider.h"
+	"Animation.h"
+
+1686480677 d:\j\game_final\texture\texture.h
+	<SDL.h>
+	<SDL_ttf.h>
+	<string>
+	<map>
+
+1686480898 d:\j\game_final\physics\collisionhandler.h
+	<vector>
+	"SDL.h"
+	"TileLayer.h"
+	"GameMap.h"
+
+1686480908 d:\j\game_final\map\tilelayer.h
+	<string>
+	<vector>
+	"Layer.h"
+	"Collider.h"
+	"SDL.h"
+	"Camera.h"
+	"Vector2D.h"
+
+1686480677 d:\j\game_final\map\layer.h
+
+1686479537 d:\j\game_final\map\gamemap.h
+	"Layer.h"
+	<vector>
+
+1686480692 source:d:\j\game_final\character\player.cpp
+	<SDL.h>
+	"Player.h"
+	"Texture.h"
+	"Input.h"
+	"Camera.h"
+	"CollisionHandler.h"
+	"Attack.h"
+	"EnemyManager.h"
+	"Pause.h"
+	"Engine.h"
+	"Sound.h"
+
+1686481129 d:\j\game_final\character\enemymanager.h
+	<vector>
+	"Enemy.h"
+	"Timer.h"
+	"Player.h"
+
+1686480677 d:\j\game_final\state\pause.h
+	"State.h"
+
+1686480677 source:d:\j\game_final\core\camera.cpp
+	"Camera.h"
+	"CollisionHandler.h"
+
+1686480677 source:d:\j\game_final\core\engine.cpp
+	"Engine.h"
+	"Input.h"
+	"Menu.h"
+	"Texture.h"
+	"ChosenPhase.h"
+	"Pause.h"
+
+1686480677 d:\j\game_final\state\menu.h
+	"State.h"
+
+1686480677 d:\j\game_final\state\chosenphase.h
+	"State.h"
+	"Player.h"
+
+1686480912 source:d:\j\game_final\map\mapparser.cpp
+	"MapParser.h"
+	"SDL.h"
+	<iostream>
+
+1686480677 d:\j\game_final\map\mapparser.h
+	<map>
+	<string>
+	"GameMap.h"
+	"TileLayer.h"
+	"tinyxml.h"
+
+1686481739 d:\j\game_final\map\tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1685276623 d:\j\game_final\map\tinystr.h
+	<assert.h>
+	<string.h>
+
+1686480677 source:d:\j\game_final\map\tilelayer.cpp
+	"TileLayer.h"
+	"Texture.h"
+	<iostream>
+
+1686480612 source:d:\j\game_final\physics\collisionhandler.cpp
+	"CollisionHandler.h"
+	"Play.h"
+	"Engine.h"
+	"MapParser.h"
+	<iostream>
+
+1686480677 d:\j\game_final\state\play.h
+	"State.h"
+	"GameMap.h"
+
+1686480223 source:d:\j\game_final\state\chosenphase.cpp
+	"ChosenPhase.h"
+	"Texture.h"
+	"Button.h"
+	"Timer.h"
+	"Engine.h"
+	"Play.h"
+
+1686480438 d:\j\game_final\widget\button.h
+	"GameObject.h"
+
+1686480677 source:d:\j\game_final\state\menu.cpp
+	"Menu.h"
+	"Input.h"
+	"Play.h"
+	"Engine.h"
+	"Texture.h"
+	"Button.h"
+	"Timer.h"
+	"Sound.h"
+
+1686480677 source:d:\j\game_final\state\pause.cpp
+	"Pause.h"
+	"Play.h"
+	"Input.h"
+	"Engine.h"
+	"Texture.h"
+	"Button.h"
+	"Timer.h"
+	"Menu.h"
+
+1686480677 source:d:\j\game_final\texture\animation.cpp
+	"Animation.h"
+	"Texture.h"
+
+1686480133 source:d:\j\game_final\texture\texture.cpp
+	"Texture.h"
+	"Engine.h"
+	"Vector2d.h"
+	"Camera.h"
+
+1686480677 source:d:\j\game_final\widget\button.cpp
+	"Button.h"
+	"Input.h"
+	"Texture.h"
+
+1686480677 source:d:\j\game_final\character\enemymanager.cpp
+	"EnemyManager.h"
+	"CollisionHandler.h"
+	"Enemy.h"
+	"Timer.h"
+	"ChosenPhase.h"
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<vector>
+
+1686480677 source:d:\j\game_final\state\play.cpp
+	"Pause.h"
+	"Play.h"
+	"Input.h"
+	"Engine.h"
+	"Texture.h"
+	"Button.h"
+	"Timer.h"
+	"Menu.h"
+	"MapParser.h"
+	"Player.h"
+	"Camera.h"
+	"EnemyManager.h"
+	"Sound.h"
+	"ChosenPhase.h"
+
+1679849572 d:\j\game_final\vendor\tinyxml-master\tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1376507762 d:\j\game_final\vendor\tinyxml-master\tinystr.h
+	<assert.h>
+	<string.h>
+
+1376507762 source:d:\j\game_final\vendor\tinyxml-master\tinystr.cpp
+	"tinystr.h"
+
+1376507762 source:d:\j\game_final\vendor\tinyxml-master\tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1376507762 source:d:\j\game_final\vendor\tinyxml-master\tinyxmlerror.cpp
+	"tinyxml.h"
+
+1376507762 source:d:\j\game_final\vendor\tinyxml-master\tinyxmlparser.cpp
 	<ctype.h>
 	<stddef.h>
 	"tinyxml.h"

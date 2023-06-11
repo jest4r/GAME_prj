@@ -1,12 +1,11 @@
+#include <SDL.h>
 #include "Engine.h"
 #include "Timer.h"
-#include <iostream>
-int main(int argc, char** argv)
-{
+int main(int argc, char** argv) {
+    SDL_Log("Good!");
     Engine::GetInstance()->Init();
-    while (Engine::GetInstance()->IsRunning())
-    {
-        Engine::GetInstance()->Events();
+    while(Engine::GetInstance()->IsRunning()) {
+        Engine::GetInstance()->Event();
         Engine::GetInstance()->Update();
         Engine::GetInstance()->Render();
         Timer::GetInstance()->Tick();
