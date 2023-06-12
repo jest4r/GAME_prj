@@ -45,7 +45,7 @@ Player::Player( Properties* props ): Character(props)
 void Player::Draw()
 {
     m_Animation->Draw( m_Transform->X, m_Transform->Y, m_Width, m_Height, m_Flip );
-    m_Collider->DrawDebug();
+  //  m_Collider->DrawDebug();
     if(m_CurrentAttack != nullptr) m_CurrentAttack->Draw();
 }
 
@@ -79,7 +79,7 @@ void Player::Update(float dt)
     }
 
     // attack
-    if( Input::GetInstance()->GetKeyDown( SDL_SCANCODE_F ) )
+    if( Input::GetInstance()->GetKeyDown( SDL_SCANCODE_J) )
     {
         m_RigidBody->UnSetForce();
         m_IsAttacking = true;
@@ -88,7 +88,7 @@ void Player::Update(float dt)
     }
 
     // punching
-    if( Input::GetInstance()->GetKeyDown( SDL_SCANCODE_Q ))
+    if( Input::GetInstance()->GetKeyDown( SDL_SCANCODE_K))
     {
         m_RigidBody->UnSetForce();
         m_IsPunching = true;
@@ -201,7 +201,7 @@ void Player::AnimationState() {
     if(m_IsRunning) m_Animation->SetProps( m_TextureID, 7, 6, 60);
 
     // attacking
-    if(m_IsAttacking) m_Animation->SetProps( m_TextureID, 4, 5, 50);
+    if(m_IsAttacking) m_Animation->SetProps( m_TextureID, 5, 6, 40);
 
     // jumping
     if(m_IsJumping) m_Animation->SetProps( m_TextureID, 2, 3, 200 );

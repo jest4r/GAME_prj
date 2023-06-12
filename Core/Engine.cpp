@@ -17,8 +17,8 @@ void Engine::Init()
     if (TTF_Init() == -1) {
         SDL_Log("TTF_Init failed: %s\n", TTF_GetError());
     }
-    //SDL_WindowFlags wf = ( SDL_WindowFlags ) ( SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI );
-    m_Window = SDL_CreateWindow( "Tomb Raider", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, 0 ); //, wf );
+    SDL_WindowFlags wf = ( SDL_WindowFlags ) ( SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI );
+    m_Window = SDL_CreateWindow( "Adventure to Horizon", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, wf );
     if( m_Window == nullptr )
     {
         SDL_Log( "Failed to create window: %s",SDL_GetError() );

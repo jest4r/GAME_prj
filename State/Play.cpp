@@ -25,17 +25,17 @@ EnemyManager *smile = nullptr;
 void Play::Init()
 {
     SDL_Log("Mode: Play");
-    Texture::GetInstance()->Load("PlayBg", "assets/backgrounds/background_2.jpg");
+    Texture::GetInstance()->Load("PlayBg", "assets/backgrounds/bg_2.png");
     Texture::GetInstance()->Load("PlayBt", "assets/interface/pixelButton.png");
     Texture::GetInstance()->Load("Player", "assets/entities/player.png");
-    Texture::GetInstance()->Load("Shoot", "assets/entities/spark-Sheet.png");
+    Texture::GetInstance()->Load("Shoot", "assets/entities/shoot.png");
     Texture::GetInstance()->Load("Slash", "assets/entities/slash.png");
     Texture::GetInstance()->Load("Smile", "assets/entities/Smile.png");
     Texture::GetInstance()->Load("Infor", "assets/interface/infor.png");
 
     Sound::GetInstance()->LoadMusic("PlaySound", "assets/sounds/Play.wav");
-    Sound::GetInstance()->LoadEffect("Shoot", "assets/sounds/Shoot.wav");
-    Sound::GetInstance()->LoadEffect("Slash", "assets/sounds/Slash.wav");
+    Sound::GetInstance()->LoadEffect("Shoot", "assets/sounds/Shot.wav");
+    Sound::GetInstance()->LoadEffect("Slash", "assets/sounds/Slash1.wav");
 
     pause = new Button(new Properties("PlayBt", 0, 0, 192, 192), 5, 1, 0.25);
     infor = new Button(new Properties("Infor", 0, 570, 500, 100), 0, 0, 0.75);

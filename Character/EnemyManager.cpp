@@ -49,8 +49,6 @@ void EnemyManager::Update(float dt)
             }
         }
     }
-    //std::cout << Defeated << " " << m_Size << " " << m_LevelCnt << std::endl;
-
 }
 
 void EnemyManager::Draw()

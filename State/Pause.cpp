@@ -16,10 +16,10 @@ void Pause::Init()
 {
     SDL_Log("Pause mode!");
     m_Death = false;
-    Texture::GetInstance()->Load("PlayBg", "assets/backgrounds/background_2.jpg");
+    Texture::GetInstance()->Load("PlayBg", "assets/backgrounds/bg_2.png");
     Texture::GetInstance()->Load("PlayBt", "assets/interface/pixelButton.png");
     resume = new Button(new Properties("PlayBt", 375, 375, 192, 192), 6, 0, 1);
-    menu = new Button(new Properties("PlayBt", 175, 375, 192, 192), 0, 1, 1);
+    menu = new Button(new Properties("PlayBt", 175, 375, 192, 192), 3, 0, 1);
     repeat = new Button(new Properties("PlayBt", 575, 375, 192, 192), 6, 1, 1);
 }
 
@@ -35,7 +35,7 @@ void Pause::Render()
 {
     Texture::GetInstance()->Draw("PlayBg", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     if(!m_Death) resume->Draw();
-    if (m_Death) Texture::GetInstance()->DrawText("HighScre", "High score:   "+std::to_string(r)+"   levels   "+ std::to_string(s)+ "  scores ", 300, 200, 0.5);
+    if (m_Death) Texture::GetInstance()->DrawText("HighScore", "High score:   "+std::to_string(r)+"   levels   "+ std::to_string(s)+ "  scores ", 300, 200, 0.5);
     menu->Draw();
     repeat->Draw();
 }

@@ -43,7 +43,7 @@ Enemy::Enemy(Properties* props, int AttackFrame, int IdleFrame, int DeadFrame): 
 void Enemy::Draw()
 {
     m_Animation->Draw( m_Transform->X, m_Transform->Y, m_Width, m_Height, m_Flip );
-    m_Collider->DrawDebug();
+   // m_Collider->DrawDebug();
     //if(m_IsAttacking) m_Attack->Draw();
 }
 

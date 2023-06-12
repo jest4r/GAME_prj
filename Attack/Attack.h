@@ -16,7 +16,7 @@ class Attack: public GameObject
             m_IsMoving = true;
             m_IsLeft = (m_Flip == SDL_FLIP_NONE) ? 1 : -1;
             m_animation = new Animation();
-            m_animation->SetProps(props->TextureID, 0, 5, 100);
+            m_animation->SetProps(props->TextureID, 0, 1, 100);
             m_Collider = new Collider();
             m_Collider->SetBuffer(0, 0, 0, 0);
         }
@@ -24,7 +24,7 @@ class Attack: public GameObject
         void Draw() {
             if(m_IsMoving) {
                 m_animation->Draw(m_Transform->X, m_Transform->Y, m_Width, m_Height, m_Flip);
-                m_Collider->DrawDebug();
+                //m_Collider->DrawDebug();
             }
         }
         void Update(float dt) {
