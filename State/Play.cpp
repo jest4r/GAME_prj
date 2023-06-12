@@ -35,7 +35,10 @@ void Play::Init()
 
     Sound::GetInstance()->LoadMusic("PlaySound", "assets/sounds/Play.wav");
     Sound::GetInstance()->LoadEffect("Shoot", "assets/sounds/Shot.wav");
-    Sound::GetInstance()->LoadEffect("Slash", "assets/sounds/Slash1.wav");
+    Sound::GetInstance()->LoadEffect("Hit", "assets/sounds/Hit.wav");
+    Sound::GetInstance()->LoadEffect("Kill", "assets/sounds/Kill.wav");
+    Sound::GetInstance()->LoadEffect("Lose", "assets/sounds/Lose.wav");
+    Sound::GetInstance()->LoadEffect("Slash", "assets/sounds/Slash.wav");
 
     pause = new Button(new Properties("PlayBt", 0, 0, 192, 192), 5, 1, 0.25);
     infor = new Button(new Properties("Infor", 0, 570, 500, 100), 0, 0, 0.75);

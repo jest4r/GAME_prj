@@ -53,6 +53,7 @@ class Player: public Character
         bool m_IsRunning;
         bool m_IsFalling;
         bool m_IsPunching;
+        bool m_IsCrouching;
         bool m_IsShoot;
         bool m_IsLeft;
         bool m_Hit;

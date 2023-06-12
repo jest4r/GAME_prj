@@ -36,7 +36,7 @@ void Sound::LoadMusic(std::string id, std::string source)
         std::cerr << Mix_GetError() << ": " << std::endl;
 }
 
-void Sound::PlayeEffect(std::string id)
+void Sound::PlayEffect(std::string id)
 {
     if(Mix_PlayChannel(0, m_EffectMap[id], 0) == -1) {
         std::cerr << Mix_GetError() << ": " << id << std::endl;

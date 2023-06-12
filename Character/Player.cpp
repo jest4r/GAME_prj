@@ -18,6 +18,7 @@ Player::Player( Properties* props ): Character(props)
     m_IsFalling = false;
     m_IsGrounded = false;
     m_IsJumping = false;
+    m_IsCrouching = false;
     m_IsPunching = false;
     m_IsRunning = false;
     m_IsShoot = false;
@@ -52,6 +53,7 @@ void Player::Draw()
 void Player::Update(float dt)
 {
     m_IsRunning = false;
+    m_IsCrouching = false;
     m_RigidBody->UnSetForce();
     m_CoolDown -= dt;
 
@@ -114,7 +116,12 @@ void Player::Update(float dt)
         m_IsJumping = false;
         m_JumpTime = JUMP_TIME;
     }
-
+    // crouching
+    if (Input::GetInstance()->GetKeyDown(SDL_SCANCODE_S) && !m_IsAttacking && !m_IsFalling )
+    {
+      // m_RigidBody->UnsetForce();
+        m_IsCrouching = true;
+    }
     // falling
     if(m_RigidBody->GetVelocity().Y > 0 && !m_IsGrounded) m_IsFalling = true;
     else m_IsFalling = false;
@@ -129,8 +136,8 @@ void Player::Update(float dt)
         m_AttackTime = ATTACK_TIME;
     }
 
-    if(m_IsPunching) Sound::GetInstance()->PlayeEffect("Shoot");
-    if(m_IsAttacking) Sound::GetInstance()->PlayeEffect("Slash");
+    if(m_IsPunching) Sound::GetInstance()->PlayEffect("Shoot");
+    if(m_IsAttacking) Sound::GetInstance()->PlayEffect("Slash");
 
     // punch timer
     if(m_IsPunching && m_PunchTime > 0 && m_CoolDown <= 0) {
@@ -191,6 +198,7 @@ void Player::GetHit() {
 void Player::DeadStatment() {
     Engine::GetInstance()->ChangeState(Pause::GetInstance());
     Pause::GetInstance()->Death();
+    Sound::GetInstance()->PlayEffect("Lose");
 }
 
 void Player::AnimationState() {
@@ -211,6 +219,9 @@ void Player::AnimationState() {
 
     // punching
     if(m_IsPunching) m_Animation->SetProps(m_TextureID, 8, 5, 60);
+
+    //crouching
+    if(m_IsCrouching) m_Animation->SetProps(m_TextureID, 1, 2, 60);
 }
 
 void Player::UseItems(int Type, int inf) {

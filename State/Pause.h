@@ -1,6 +1,6 @@
 #ifndef PAUSE_H
 #define PAUSE_H
-
+#include "Sound.h"
 #include "State.h"
 
 class Pause: public State

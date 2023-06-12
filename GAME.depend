@@ -1468,10 +1468,10 @@
 	"SDL.h"
 	"Vector2d.h"
 
-1686480675 source:d:\j\game_final\sound\sound.cpp
+1686597117 source:d:\j\game_final\sound\sound.cpp
 	"Sound.h"
 
-1686480098 d:\j\game_final\sound\sound.h
+1686597127 d:\j\game_final\sound\sound.h
 	<map>
 	<string>
 	<iostream>
@@ -1488,7 +1488,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1686494707 source:d:\j\game_final\character\enemy.cpp
+1686598830 source:d:\j\game_final\character\enemy.cpp
 	<SDL.h>
 	<math.h>
 	"Enemy.h"
@@ -1496,6 +1496,7 @@
 	"Input.h"
 	"Camera.h"
 	"CollisionHandler.h"
+	"Sound.h"
 	<iostream>
 
 1686480677 d:\j\game_final\character\enemy.h
@@ -1545,7 +1546,7 @@
 	"SDL.h"
 	<string>
 
-1686480677 d:\j\game_final\character\player.h
+1686599458 d:\j\game_final\character\player.h
 	<iostream>
 	<set>
 	"Character.h"
@@ -1555,7 +1556,7 @@
 	"Vector2D.h"
 	"Attack.h"
 
-1686578684 d:\j\game_final\attack\attack.h
+1686578722 d:\j\game_final\attack\attack.h
 	"Vector2d.h"
 	"GameObject.h"
 	"Texture.h"
@@ -1589,7 +1590,7 @@
 	"Layer.h"
 	<vector>
 
-1686577163 source:d:\j\game_final\character\player.cpp
+1686599637 source:d:\j\game_final\character\player.cpp
 	<SDL.h>
 	"Player.h"
 	"Texture.h"
@@ -1608,7 +1609,8 @@
 	"Timer.h"
 	"Player.h"
 
-1686480677 d:\j\game_final\state\pause.h
+1686598404 d:\j\game_final\state\pause.h
+	"Sound.h"
 	"State.h"
 
 1686480677 source:d:\j\game_final\core\camera.cpp
@@ -1694,7 +1696,7 @@
 	"Timer.h"
 	"Sound.h"
 
-1686572628 source:d:\j\game_final\state\pause.cpp
+1686599177 source:d:\j\game_final\state\pause.cpp
 	"Pause.h"
 	"Play.h"
 	"Input.h"
@@ -1719,7 +1721,7 @@
 	"Input.h"
 	"Texture.h"
 
-1686480677 source:d:\j\game_final\character\enemymanager.cpp
+1686578684 source:d:\j\game_final\character\enemymanager.cpp
 	"EnemyManager.h"
 	"CollisionHandler.h"
 	"Enemy.h"
@@ -1730,7 +1732,7 @@
 	<time.h>
 	<vector>
 
-1686577468 source:d:\j\game_final\state\play.cpp
+1686598775 source:d:\j\game_final\state\play.cpp
 	"Pause.h"
 	"Play.h"
 	"Input.h"

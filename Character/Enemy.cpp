@@ -5,6 +5,7 @@
 #include "Input.h"
 #include "Camera.h"
 #include "CollisionHandler.h"
+#include "Sound.h"
 #include <iostream>
 
 Enemy::Enemy(Properties* props, int AttackFrame, int IdleFrame, int DeadFrame): Character(props)
@@ -74,6 +75,8 @@ void Enemy::Update(float dt)
         m_Attack->Update(dt);
         if(CollisionHandler::GetInstance()->CheckCollision(m_Attack->GetBox(), m_Player->GetBox()) && ((int)(m_AttackTime - 10.0f) == 0) && m_AttackTime >= 10.0f) {
             m_Player->GetHit();
+            Sound::GetInstance()->PlayEffect("Hit");
+
         }
     } else {
         m_IsAttacking = false;
@@ -88,6 +91,7 @@ void Enemy::Update(float dt)
             m_DeadTime = DEAD_TIME;
             m_Dying = false;
             m_IsDead = true;
+            Sound::GetInstance()->PlayEffect("Kill");
         } else {
             m_DeadTime -= dt;
         }

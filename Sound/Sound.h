@@ -20,7 +20,7 @@ class Sound
         void PlayMusic(std::string id);
         void LoadMusic(std::string id, std::string source);
 
-        void PlayeEffect(std::string id);
+        void PlayEffect(std::string id);
         void LoadEffect(std::string id, std::string source);
 
         inline static Sound* GetInstance() {return s_Instance = (s_Instance != nullptr) ? s_Instance : new Sound();}

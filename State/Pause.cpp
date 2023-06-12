@@ -35,7 +35,11 @@ void Pause::Render()
 {
     Texture::GetInstance()->Draw("PlayBg", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     if(!m_Death) resume->Draw();
-    if (m_Death) Texture::GetInstance()->DrawText("HighScore", "High score:   "+std::to_string(r)+"   levels   "+ std::to_string(s)+ "  scores ", 300, 200, 0.5);
+    if (m_Death)
+    {
+
+        Texture::GetInstance()->DrawText("HighScore", "YOU ARE DEATH. High score:   "+std::to_string(r)+"   levels   "+ std::to_string(s)+ "  scores ", 300, 20, 1);
+    }
     menu->Draw();
     repeat->Draw();
 }
