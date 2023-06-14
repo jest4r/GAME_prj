@@ -1,4 +1,4 @@
-### GAME INT2215: ADVENTURE TO HORIZON - Made by Jest4r  
+# GAME INT2215: ADVENTURE TO HORIZON - Made by Jest4r  
 
 ## IDEA:
 Based on basic 2-D adventure game, inspired by a classic Pixel game CONTRA, using SDL2.0 and written in C++ with some upgrades.
