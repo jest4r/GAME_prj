@@ -21,7 +21,7 @@ Step 4: Enjoy the GAME </br>
 
 ## HOW TO PLAY
 Use Mouse left button to monitor the GUI of the game. </br>
-# INGAME:
+### INGAME:
 A, D: Move left or right.
 W: Jump </br>
 S: Slice </br>
